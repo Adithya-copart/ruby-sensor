@@ -6,9 +6,9 @@ module Instana
 
     def initialize(*args)
       super(*args)
-      if ENV.key?('INSTANA_GEM_TEST')
+      if ENV.key?('INSTANA_TEST')
         self.level = Logger::DEBUG
-      elsif ENV.key?('INSTANA_GEM_DEV') || ENV.key?('INSTANA_DEBUG')
+      elsif ENV.key?('INSTANA_DEBUG')
         self.level = Logger::DEBUG
       elsif ENV.key?('INSTANA_QUIET')
         self.level = Logger::FATAL
