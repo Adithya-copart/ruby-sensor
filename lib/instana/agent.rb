@@ -456,7 +456,7 @@ module Instana
       end
 
       response = @httpclient.request(req)
-      # ::Instana.logger.debug "#{req.method}->#{req.uri} body:(#{req.body}) Response:#{response} body:(#{response.body})"
+      ::Instana.logger.debug "#{req.method}->#{req.uri} body:(#{req.body}) Response:#{response} body:(#{response.body})"
 
       response
     rescue Errno::ECONNREFUSED
